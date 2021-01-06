@@ -4,4 +4,5 @@
   - [kaya](bilibili_videos/kaya.md)
   
 - 杂谈
-  - C++学习
+  - [C++学习](cpp/cpp_learning.md)
+
