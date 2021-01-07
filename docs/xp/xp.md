@@ -6,7 +6,7 @@
 
 - 没错就是你们经常订阅的[中指通](https://www.youtube.com/channel/UCYjB6uufPeHSwuHs8wovLjg),确实介绍的素人作品都还不错
 
-行,这就放点近期的影片
+> 行,这就放点近期的影片
 
 1. 冬天泡温泉系列
 
