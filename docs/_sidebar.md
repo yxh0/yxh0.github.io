@@ -4,4 +4,5 @@
   
 - 杂谈
   - [C++学习](cpp/cpp_learning.md)
+  - [我的XP系统](xp/xp.md)
 
