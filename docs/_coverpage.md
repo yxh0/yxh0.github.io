@@ -1,3 +1,4 @@
+![logo](_media/Apple_logo_black.svg ':size=42x50')
 # Yxh1433のBlog
 
 
