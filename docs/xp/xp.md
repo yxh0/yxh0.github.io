@@ -7,7 +7,7 @@
 - 没错就是你们经常订阅的[中指通](https://www.youtube.com/channel/UCYjB6uufPeHSwuHs8wovLjg),确实介绍的素人作品都还不错
 
 > 行,这就放点近期的影片
-1. 脱光解禁
+1. 脱毛解禁
 
 <div style="position: relative; padding: 30% 45%;">
 <iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://www.youtube.com/embed/Z2Vv-sKBVUM" frameborder="no" scrolling="no"></iframe>
