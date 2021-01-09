@@ -49,7 +49,7 @@
 - 这是下载界面,选择适合自己的版本下载即可
   - [点我下载](https://www.fosshub.com/qBittorrent.html)
 
-![img](https://raw.githubusercontent.com/yxh0/yxh0.github.io/master/docs/images/download.png)
+![image](../images/download.png)
 
 # 关于琉璃神社⛩
 
