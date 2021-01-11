@@ -22,7 +22,7 @@
 
 ### 1.3.2 运算器
 
-运算器就好像是由电子线路组成的算盘，图1.3是它的示意图。它的功能主要是进行加、减、乘、除等算数运算。除此之外，还可以进行逻辑运算，因此通常称为**ALU**(算数逻辑运算部件)。
+- 运算器就好像是由电子线路组成的算盘，图1.3是它的示意图。它的功能主要是进行加、减、乘、除等算数运算。除此之外，还可以进行逻辑运算，因此通常称为**ALU**(算数逻辑运算部件)。
 
 <center>
     <img style="border-radius: 0.3125em;
@@ -34,3 +34,22 @@
     color: #999;
     padding: 2px;">图1-3&emsp;运算器结构示意图</div>
 </center>
+
+### 1.3.3 存储器
+
+- 存储器的功能是保存或“记忆”解题的原始数据和解题步骤。为此再运算前需要把参加运算的数据和解题步骤通过输入设备送到存储器中保存起来。
+- 通常，在存储器中把保存一个数的16个触发器称为一个<font color = "1E90FF">存储单元</font>。存储器是由许多存储单元组成的。每个存储单元都有编号，称为<font color = "1E90FF">地址</font>。向存储器中
+
+
+
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="../images/1-4.png" height="300px">
+    <br>
+    <div style="color:orange;border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">图1-4&emsp;存储器结构示意图</div>
+</center>
+
