@@ -13,3 +13,6 @@
 - 古籍整理
   - [兩浙防護錄](Zhejiang/Zhejiang.md)
 
+- 老剧回顾
+  - [东京爱情故事(東京ラブストーリー)](oldshow/oldmemory.md)
+
