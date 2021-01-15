@@ -8,3 +8,10 @@
 
 
 
+## 主题曲
+
+**ラブ・ストーリーは突然に** (爱情故事突然发生)，听到这歌就像又看到东爱中的莉香一样。
+
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="//player.bilibili.com/player.html?aid=373712062&bvid=BV14o4y1o7g7&cid=282633720&page=1" frameborder="no" scrolling="no"></iframe>
+</div></br>
