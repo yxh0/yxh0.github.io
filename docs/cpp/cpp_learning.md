@@ -2,7 +2,7 @@
 
 ## 测试性放点代码
 
-```c++
+```cpp
 #include <string>
 #include <functional>
 #include <iostream>
