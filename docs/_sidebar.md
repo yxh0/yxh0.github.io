@@ -7,6 +7,8 @@
   - [C++学习](cpp/cpp_learning.md)
   - [计算机网络](computer_network/computer_network.md)
   - [计算机组成原理](Principles_of_Computer_Organization/Principles_of_Computer_Organization.md)
+  - [计算机图形学](Computer_graphics/Computer_graphics.md)
+  - [ffmpeg](ffmpeg/ffmpeg.md)
 - 古籍整理
   - [兩浙防護錄](Zhejiang/Zhejiang.md)
 - 老剧回顾
