@@ -15,5 +15,7 @@
 - 老剧回顾
   - [东京爱情故事(東京ラブストーリー)](oldshow/oldmemory.md)
 - 性学
-  - [性学的业余研究笔记](Sexology/sexology)
+  - [性学的业余研究笔记](Sexology/sexology.md)
+- 家庭
+  - [个人对家庭的理解](Family/family.md)
 
