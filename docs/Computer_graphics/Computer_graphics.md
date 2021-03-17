@@ -65,4 +65,171 @@
    
    - 世界坐标系：系统的绝对坐标系
 
-  
+## 实验二: OpenGL基本图元
+
+### 任务1: 绘制圆和余弦函数
+
+-  学会使用`GL_POINTS`、`GL_LINES`、`GL_LINE_LOOP`、`GL_LINE_STRIP`绘制基本二维形状
+- 理解OpenGL状态机概念：
+  - 使用`glPointSize()`设置点大小
+  - 使用`glLIneWidth()`设置线的粗细
+  - 使用`glColor3f()`设置颜色
+
+#### 源代码：
+
+```c++
+#define GLEW_STATIC
+#define FREEGLUT_STATIC
+
+/*
+* Include the OpenGL releated libs' head files
+*/
+#include <GL/glew.h>
+#include <GL/freeglut.h>
+#include <GL/glext.h>
+#include <cmath>
+
+int n = 10000;
+float PI = 3.1415926f;
+float R = 8.0f;
+
+void init() {
+	glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
+}
+
+void line() {
+	glColor3f(0.f, 0.f, 1.f);
+	GLfloat x = -1.0;
+	glClear(GL_COLOR_BUFFER_BIT);
+	glBegin(GL_LINE_STRIP);
+	for (float x = -5 * PI; x < 5 * PI; x += 0.1f) {
+		glVertex2f(x / (5 * PI), sin(x) - 10);
+	}
+	glEnd();
+	//横线
+	glColor3f(0.f, 0.f, 0.f);
+	glBegin(GL_LINES);
+	glVertex2f(0.0f, 0.0f);
+	glVertex2f(8.0f, 0.0f);
+	glEnd();
+	//竖线
+	glColor3f(0.f, 0.f, 0.f);
+	glBegin(GL_LINES);
+	glVertex2f(0.0f, 0.0f);
+	glVertex2f(0.0f, 8.0f);
+	glEnd();
+	//绿点
+	glColor3f(0.f, 1.f, 0.f);
+	glPointSize(15);
+	glBegin(GL_POINTS);
+	glVertex2f(0.f, 0.f);
+	glEnd();
+	//右蓝点
+	glColor3f(0.f, 0.f, 1.f);
+	glPointSize(15);
+	glBegin(GL_POINTS);
+	glVertex2f(8.0f, 0.f);
+	glEnd();
+	//上蓝点
+	glColor3f(0.f, 0.f, 1.f);
+	glPointSize(15);
+	glBegin(GL_POINTS);
+	glVertex2f(0.f, 8.0f);
+	glEnd();
+	glFlush();
+}
+void circle() {
+	glColor3f(1.f, 0.f, 0.f);
+	glBegin(GL_LINE_STRIP);
+	for (int i = 0; i < n; i++) {
+		glVertex2f(R * cos(4 * PI * i / n), R * sin(4 * PI * i / n));
+	}
+	int i = 0;
+	glVertex2f(R * cos(4 * PI * i / n), R * sin(4 * PI * i / n));
+	glEnd();
+	glFlush();
+}
+void display() {
+	glClear(GL_COLOR_BUFFER_BIT);
+	line();
+	circle();
+	glutSwapBuffers();
+}
+
+```
+
+#### 实验效果
+
+![](../images/image-1.png)
+
+
+
+### 任务2: 绘制柱状图
+
+理解物体坐标系、世界坐标系以及两者之间的关系，尝试使用 `glTranslate*()` 函数进行模型变换。学会使用`GL_TRIANGLE_STRIP` 绘制二维实体。 实验设计：先设计好坐标轴，然后画好箭头，以此坐标轴为基础进行柱状图的绘制，然后用 `GL_TRIANGLE_STRIP` 函数用4个点实现绘制柱状图
+
+#### 源代码
+
+```c++
+#include <GL/glew.h>
+#include <GL/freeglut.h>
+#include <GL/glext.h>
+#include <cmath>
+
+int n = 1e4;
+float PI = 3.1415926f;
+float R = 4.0f;
+
+void init() {
+	glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
+}
+
+void axis()
+{
+	glColor3f(0.f, 0.f, 0.f);
+	glBegin(GL_LINES);
+	// 坐标十字线
+	glVertex2f(-10.0, 0.0f);
+	glVertex2f(10.0f, 0.0f);
+	glVertex2f(0.0f, 10.0f);
+	glVertex2f(0.0f, 0.0f);
+	// axis 1
+	glVertex2f(9.75f, 0.25f);
+	glVertex2f(10.0f, 0.0f);
+	glVertex2f(9.75f, -0.25f);
+	glVertex2f(10.0f, 0.0f);
+	// axis 2
+	glVertex2f(-0.25f, 9.75f);
+	glVertex2f(0.0f, 10.0f);
+	glVertex2f(0.25f, 9.75f);
+	glVertex2f(0.0f, 10.0f);
+
+	glEnd();
+}
+
+void rectangle(double R, double G, double B, double x, double y, double width, double height)
+{
+	glColor3f(R, G, B);
+	glPointSize(1.f);
+	glBegin(GL_TRIANGLE_STRIP);
+	glVertex2f(x, y);
+	glVertex2f(x, y + height);
+	glVertex2f(x + width, y);
+	glVertex2f(x + width, y + height);
+	glEnd();
+}
+
+void display() {
+	glClear(GL_COLOR_BUFFER_BIT);
+	axis();
+	rectangle(1.0, 0.5, 0.0, -1.0, 0.0, 1.0, -9.0);
+	rectangle(0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 5.0);
+	rectangle(1.0, 0.0, 0.0, 1.0, 0.0, 1.0, 3.0);
+	rectangle(0.0, 1.0, 0.0, 2.0, 0.0, 1.0, 9.0);
+	glutSwapBuffers();
+}
+```
+
+#### 实验效果
+
+![](../images/image-2.png)
