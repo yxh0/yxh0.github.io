@@ -233,3 +233,51 @@ void display() {
 #### 实验效果
 
 ![](../images/image-2.png)
+
+
+
+## 作业2
+
+### 作业2-1
+
+已知：$x = \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix}$, $y = \begin{pmatrix} y_1 \\ y_2 \\ y_3 \end{pmatrix}$,其叉积又如下关系：
+$$
+\mathbf{x \times y} = \begin{vmatrix} \mathbf{i} & \mathbf{j} & \mathbf{k} \\ x_1 & x_2 & x_3 \\ y_1 & y_2 & y_3\end{vmatrix}, \mathbf{i} = \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix} , \mathbf{j} = \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix} , \mathbf{k} = \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix}
+$$
+
+- 请证明：
+  $$
+  \mathbf{x \times y} = \begin{pmatrix} x_2 \cdot y_3 - x_3 \cdot y_2 \\ x_3 \cdot y_1 - x_1 \cdot y_3 \\ x_1 \cdot y_2 - x_2 \cdot y_1 \end{pmatrix}
+  $$
+
+这个行列式可以使用萨吕法则或拉普拉斯展开计算。使用萨吕法则可以展开为：
+$$
+\mathbf{x \times y} = (x_2y_3\mathbf{i} + x_3y_2\mathbf{j}+x_1y_2\mathbf{k}) - (x_3y_2 \mathbf{i} + x_1y_3\mathbf{j} + x_2y_1\mathbf{k})
+\\ = (x_2y_3 - x_3y_2)\mathbf{i} + (x_3y_1 - x_1y_3)\mathbf{j} + (x_1y_2 - x_2y_1)\mathbf{k}
+$$
+
+$\therefore$得证叉积公式
+
+使用拉普拉斯展开可以沿第一行展开为：
+$$
+\mathbf{x \times y} = \begin{vmatrix} x_2 & x_3 \\ y_2 & y_3 \end{vmatrix}\mathbf{i} - \begin{vmatrix} x_1 & x_3 \\ y_2 & y_3 \end{vmatrix}\mathbf{j} + \begin{vmatrix} x_1 & x_2 \\ y_1 & y_2 \end{vmatrix} \mathbf{k}
+\\ = (x_2y_3 - x_3y_2)\mathbf{i} + (x_3y_1 - x_1y_3)\mathbf{j} + (x_1y_2 - x_2y_1)\mathbf{k}
+$$
+ $\therefore$得证叉积公式
+
+### 作业2-2
+
+- 首先请计算如下两个矩阵:
+
+<font size = 5>$\mathbf{M_1} = \mathbf{S_{2.0,1.5}}\mathbf{R}_{\frac{3\pi}{4}}$</font>
+
+<font size = 5>$\mathbf{M2} = \mathbf{S_{2.0,1.5}R_{\frac{3\pi}{4}}T_{5,5}}$</font>
+
+- 然后计算对同一个点惊醒变换后所得到的新点的**二维坐标**：
+
+$$
+\mathbf{x_1} = \mathbf{M_1}\begin{pmatrix}3 \\ 4 \\ 1 \end{pmatrix} \quad \mathbf{x2} = \mathbf{M_2}\begin{pmatrix} 3 \\ 4 \\ 1 \end{pmatrix}
+$$
+
+- $X_1和$$X_2$的坐标是否相等？
+
