@@ -249,6 +249,7 @@ $$
   $$
   \mathbf{x \times y} = \begin{pmatrix} x_2 \cdot y_3 - x_3 \cdot y_2 \\ x_3 \cdot y_1 - x_1 \cdot y_3 \\ x_1 \cdot y_2 - x_2 \cdot y_1 \end{pmatrix}
   $$
+  
 
 这个行列式可以使用萨吕法则或拉普拉斯展开计算。使用萨吕法则可以展开为：
 $$
@@ -269,15 +270,50 @@ $$
 
 - 首先请计算如下两个矩阵:
 
-<font size = 5>$\mathbf{M_1} = \mathbf{S_{2.0,1.5}}\mathbf{R}_{\frac{3\pi}{4}}$</font>
+<font size = 5>$\mathbf{M_1} = \mathbf{S_{2.0,1.5}}\mathbf{T_{5,5}}\mathbf{R}_{\frac{3\pi}{4}}$</font>
 
 <font size = 5>$\mathbf{M2} = \mathbf{S_{2.0,1.5}R_{\frac{3\pi}{4}}T_{5,5}}$</font>
 
-- 然后计算对同一个点惊醒变换后所得到的新点的**二维坐标**：
+- 然后计算对同一个点进行变换后所得到的新点的**二维坐标**：
 
 $$
-\mathbf{x_1} = \mathbf{M_1}\begin{pmatrix}3 \\ 4 \\ 1 \end{pmatrix} \quad \mathbf{x2} = \mathbf{M_2}\begin{pmatrix} 3 \\ 4 \\ 1 \end{pmatrix}
+\mathbf{x_1} = \mathbf{M_1}\begin{pmatrix}3 \\ 4 \\ 1 \end{pmatrix} \quad \mathbf{x_2} = \mathbf{M_2}\begin{pmatrix} 3 \\ 4 \\ 1 \end{pmatrix}
 $$
 
-- $X_1和$$X_2$的坐标是否相等？
+- $X_1$和$X_2$的坐标是否相等？
+
+
+
+#### 简单对两个矩阵变换进行计算
+
+$$
+\mathbf{M_1} = \begin{pmatrix} 2.0 & 0 & 0 \\ 0 & 1.5 & 0 \\ 0  & 0 & 0\end{pmatrix} \cdot  \begin{pmatrix} 1 & 0 & 5 \\ 0 & 1 & 5 \\ 0 & 0 & 1 \end{pmatrix} \cdot \begin{pmatrix} cos\frac{3\pi}{4} & -sin\frac{3\pi}{4} & 0 \\ sin\frac{3\pi}{4} & cos\frac{3\pi}{4} & 0 \\ 0  & 0 & 1\end{pmatrix}\\
+= \begin{pmatrix} -\sqrt{2} & -\sqrt{2} & 10 \\ \frac{3\sqrt{2}}{4} & -\frac{3\sqrt{2}}{4} & \frac{15}{2} \\0 & 0 & 0 \end{pmatrix} \\
+\mathbf{x_1} = \mathbf{M_1}\begin{pmatrix}3 \\ 4 \\ 1 \end{pmatrix} \\
+= \begin{pmatrix} -\sqrt{2} & -\sqrt{2} & 10 \\ \frac{3\sqrt{2}}{4} & -\frac{3\sqrt{2}}{4} & \frac{15}{2} \\0 & 0 & 0 \end{pmatrix} \cdot \begin{pmatrix}3 \\ 4 \\ 1 \end{pmatrix}\\
+= \begin{pmatrix} -7\sqrt{2} + 10 \\ \frac{-3\sqrt{2} + 30}{4} \\ 0 \end{pmatrix}
+$$
+
+------
+
+$$
+\mathbf{M_2} = \begin{pmatrix} 2.0 & 0 & 0 \\ 0 & 1.5 & 0 \\ 0  & 0 & 0\end{pmatrix} \cdot \begin{pmatrix} cos\frac{3\pi}{4} & -sin\frac{3\pi}{4} & 0 \\ sin\frac{3\pi}{4} & cos\frac{3\pi}{4} & 0 \\ 0  & 0 & 1\end{pmatrix} \cdot  \begin{pmatrix} 1 & 0 & 5 \\ 0 & 1 & 5 \\ 0 & 0 & 1 \end{pmatrix} \\
+= \begin{pmatrix} -\sqrt{2} & -\sqrt{2} & -10\sqrt{2} \\ \frac{3\sqrt{2}}{4} & \frac{-3\sqrt{2}}{4} & 0 \\
+0 & 0 & 0\end{pmatrix} \\
+\mathbf{x_2} = \mathbf{M_2}\begin{pmatrix}3 \\ 4 \\ 1 \end{pmatrix} = \begin{pmatrix} -\sqrt{2} & -\sqrt{2} & -10\sqrt{2} \\ \frac{3\sqrt{2}}{4} & \frac{-3\sqrt{2}}{4} & 0 \\
+0 & 0 & 0\end{pmatrix} \cdot \begin{pmatrix}3 \\ 4 \\ 1 \end{pmatrix}  \\
+= \begin{pmatrix} 3\sqrt{2} \\ - \frac{3\sqrt{2}}{4} \\ 0 \end{pmatrix}
+$$
+
+ $\therefore$ $X_1$和$X_2$的坐标不相等
+
+
+
+### 作业2-3
+
+- 已知三角形$ABC$的三个顶点坐标分别如下：
+
+$$
+A = \begin{pmatrix} 20 \\ 60\end{pmatrix} \quad B = \begin{pmatrix} 80 \\ 20\end{pmatrix} \quad C = \begin{pmatrix} 20 \\ 20\end{pmatrix}
+$$
 
