@@ -317,3 +317,238 @@ $$
 A = \begin{pmatrix} 20 \\ 60\end{pmatrix} \quad B = \begin{pmatrix} 80 \\ 20\end{pmatrix} \quad C = \begin{pmatrix} 20 \\ 20\end{pmatrix}
 $$
 
+
+
+- 已知某显示器的三原色以及全白点在 `CIE-XYZ` 色度图中的二维坐标如下表所示，且已知 $Y_W = 100.0$:
+
+|      | R      | G      | B      | White  |
+| ---- | ------ | ------ | ------ | ------ |
+| x    | 0.6400 | 0.3000 | 0.1500 | 0.3127 |
+| y    | 0.3300 | 0.6000 | 0.0600 | 0.3290 |
+
+请根据上述信息计算：
+
+- (1) 该显示器中(R=0.5,G=0.0,B=0.4)的点对应的 `CIE-XYZ`  颜色值
+- (2) 在 `CIE-XYZ` 色度图中的点(x=0.4,y=0.4)已知其亮度Y=100，请计算该点对应的RGB值．(小于0的分量取0，大于1的分量取1)
+
+#### 3-1 解答
+
+$$
+由题意知 x+y+z = 1，易推
+$$
+
+|      | R      | G      | B      | White  |
+| ---- | ------ | ------ | ------ | ------ |
+| x    | 0.6400 | 0.3000 | 0.1500 | 0.3127 |
+| y    | 0.3300 | 0.6000 | 0.0600 | 0.3290 |
+| z    | 0.0300 | 0.1000 | 0.7900 | 0.3583 |
+
+$$
+\because Y_W = 100.0 \quad   \ X_W = \frac{x_W}{y_W}Y_W \quad  Z_W = \frac{1-x_W-y_W}{y_W}Y_W \\
+\therefore X_W \approx 100.0 \quad Y_W = 100.0 \quad Z_W \approx 108.9 \\
+ Formula \implies f(n) = 
+ \begin{cases}
+ X_W = x_RS_R + x_GS_G + x_BS_B, \\
+ Y_W = y_RS_R + y_GS_G + y_BS_B, \\
+ Z_W = z_RS_R + z_GS_G + z_BS_B.
+ \end{cases}\\
+ \implies \begin{cases}
+ 95.0 = 0.6400S_R + 0.3000S_G + 0.1500S_B,\\
+ 100.0 = 0.3300S_R + 0.6000S_G + 0.0600S_B,\\
+ 108.9 = 0.0300S_R + 0.1000S_G + 0.7900S_B.
+ \end{cases} \\
+ \implies 
+ \begin{cases}
+ S_R \approx 64.4712 \\
+ S_G \approx 119.2274 \\
+ S_B \approx 119.8014
+ \end{cases} \\
+ 
+ (1)
+ \begin{pmatrix} X \\ Y \\ Z \end{pmatrix} = 
+ \begin{pmatrix} x_RS_R & x_GS_G & x_BS_B \\ y_RS_R & y_GS_G & y_BS_B \\ z_RS_R & z_GS_G & z_BS_B   \end{pmatrix}\begin{pmatrix} R \\ G \\ B \end{pmatrix} \\
+ = \begin{pmatrix} 0.6400 \times 64.4712 & 0.3000 \times 119.2274 & 0.1500 \times 119.8014 \\ 0.3300 \times 64.4712 & 0.6000 \times 119.2274 & 0.0600 \times 119.8014 \\ 0.0300 \times 64.4712 & 0.1000 \times 119.2274 & 0.7900 \times 119.8014 \end{pmatrix} \begin{pmatrix} 0.5 \\ 0.0 \\ 0.4 \end{pmatrix}\\
+ = \begin{pmatrix} 27.818868 \\ 13.5129816 \\ 38.8243104 \end{pmatrix}
+$$
+
+(2) 
+$$
+\because x = 0.4, y = 0.4 \quad \therefore z = 0.2 \\
+\because Y = 100 \\
+\therefore
+X = \frac{x}{y}Y = \frac{0.4}{0.4} \times 100, Z = \frac{1 - x- y}{y}Y = \frac{1 - 0.4 - 0.4}{0.4} \times 100 = 50 \\ 
+\begin{pmatrix} 100 \\ 100 \\ 50 \end{pmatrix} = \begin{pmatrix} 41.261568  & 35.76822 & 17.97021\\ 21.275496 & 71.53664 & 7.188084 \\ 1.934136 & 11.92274 & 94.643106 \end{pmatrix} \begin{pmatrix} R \\ G \\ B \end{pmatrix} \\
+\implies 
+\begin{cases}
+R \approx 1.4535 \\
+G \approx 0.9272 \\
+B \approx 0.3818
+\end{cases}  \\
+\because R > 1 \to R = 1 \\ R < 0 \to R = 0 \\
+\therefore RGB = \begin{pmatrix} 1 \\ 0.9272 \\ 0.3818 \end{pmatrix}
+$$
+
+
+## 作业3
+
+### 3-1 
+
+- 已知某显示器的三原色以及全白点在 `CIE-XYZ` 色度图中的二维坐标如下表所示，且已知 $Y_W = 100.0$:
+
+|      | R      | G      | B      | White  |
+| ---- | ------ | ------ | ------ | ------ |
+| x    | 0.6400 | 0.3000 | 0.1500 | 0.3127 |
+| y    | 0.3300 | 0.6000 | 0.0600 | 0.3290 |
+
+请根据上述信息计算：
+
+- (1) 该显示器中(R=0.5,G=0.0,B=0.4)的点对应的 `CIE-XYZ`  颜色值
+- (2) 在 `CIE-XYZ` 色度图中的点(x=0.4,y=0.4)已知其亮度Y=100，请计算该点对应的RGB值．(小于0的分量取0，大于1的分量取1)
+
+![](../images/image-3.png)
+
+#### 3-1 解答
+
+$$
+由题意知 x+y+z = 1，易推
+$$
+
+|      | R      | G      | B      | White  |
+| ---- | ------ | ------ | ------ | ------ |
+| x    | 0.6400 | 0.3000 | 0.1500 | 0.3127 |
+| y    | 0.3300 | 0.6000 | 0.0600 | 0.3290 |
+| z    | 0.0300 | 0.1000 | 0.7900 | 0.3583 |
+
+$$
+\because Y_W = 100.0 \quad   \ X_W = \frac{x_W}{y_W}Y_W \quad  Z_W = \frac{1-x_W-y_W}{y_W}Y_W \\
+\therefore X_W \approx 100.0 \quad Y_W = 100.0 \quad Z_W \approx 108.9 \\
+ Formula \implies f(n) = 
+ \begin{cases}
+ X_W = x_RS_R + x_GS_G + x_BS_B, \\
+ Y_W = y_RS_R + y_GS_G + y_BS_B, \\
+ Z_W = z_RS_R + z_GS_G + z_BS_B.
+ \end{cases}\\
+ \implies \begin{cases}
+ 95.0 = 0.6400S_R + 0.3000S_G + 0.1500S_B,\\
+ 100.0 = 0.3300S_R + 0.6000S_G + 0.0600S_B,\\
+ 108.9 = 0.0300S_R + 0.1000S_G + 0.7900S_B.
+ \end{cases} \\
+ \implies 
+ \begin{cases}
+ S_R \approx 64.4712 \\
+ S_G \approx 119.2274 \\
+ S_B \approx 119.8014
+ \end{cases} \\
+ 
+ (1)
+ \begin{pmatrix} X \\ Y \\ Z \end{pmatrix} = 
+ \begin{pmatrix} x_RS_R & x_GS_G & x_BS_B \\ y_RS_R & y_GS_G & y_BS_B \\ z_RS_R & z_GS_G & z_BS_B   \end{pmatrix}\begin{pmatrix} R \\ G \\ B \end{pmatrix} \\
+ = \begin{pmatrix} 0.6400 \times 64.4712 & 0.3000 \times 119.2274 & 0.1500 \times 119.8014 \\ 0.3300 \times 64.4712 & 0.6000 \times 119.2274 & 0.0600 \times 119.8014 \\ 0.0300 \times 64.4712 & 0.1000 \times 119.2274 & 0.7900 \times 119.8014 \end{pmatrix} \begin{pmatrix} 0.5 \\ 0.0 \\ 0.4 \end{pmatrix}\\
+ = \begin{pmatrix} 27.818868 \\ 13.5129816 \\ 38.8243104 \end{pmatrix}
+$$
+
+(2) 
+$$
+\because x = 0.4, y = 0.4 \quad \therefore z = 0.2 \\
+\because Y = 100 \\
+\therefore
+X = \frac{x}{y}Y = \frac{0.4}{0.4} \times 100, Z = \frac{1 - x- y}{y}Y = \frac{1 - 0.4 - 0.4}{0.4} \times 100 = 50 \\ 
+\begin{pmatrix} 100 \\ 100 \\ 50 \end{pmatrix} = \begin{pmatrix} 41.261568  & 35.76822 & 17.97021\\ 21.275496 & 71.53664 & 7.188084 \\ 1.934136 & 11.92274 & 94.643106 \end{pmatrix} \begin{pmatrix} R \\ G \\ B \end{pmatrix} \\
+\implies 
+\begin{cases}
+R \approx 1.4535 \\
+G \approx 0.9272 \\
+B \approx 0.3818
+\end{cases}  \\
+\because R > 1 \to R = 1 \\ R < 0 \to R = 0 \\
+\therefore RGB = \begin{pmatrix} 1 \\ 0.9272 \\ 0.3818 \end{pmatrix}
+$$
+
+
+
+### 3-2
+
+- 已知， $ I = \begin{pmatrix} 2 & 8 & 8 & 6 & 7 & 2 \\  8 & 3 & 1 & 8 & 9 & 2 \\ 1 & 1 & 0 & 3 & 3 & 9 \\  7 & 6 & 5 & 4 & 6 & 8  \\  8 & 8 & 1 & 1 & 3 & 7 \end{pmatrix}_{6 \times 6}$,请分别计算
+- (1) 应用于 $3 \times 3$ 的 `box filter` 进行滤波后输出的图形，要求输出的图像必须与输入的 $I$ 具有相同的大小，可以用$0$填充图像边缘的值;
+- (2) 应用于 $3 \times 3$ 的水平梯度以及垂直梯度滤波后的输出图像，对图像边缘处理同上
+
+
+
+#### 3-2 解答
+
+(1)
+$$
+\begin{pmatrix}
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & \frac{21}{9} & \frac{30}{9} & \frac{34}{9} & \frac{39}{9} & \frac{34}{9} & \frac{20}{9} & 0 \\
+0 & \frac{23}{9} & \frac{32}{9} & \frac{38}{9} & \frac{45}{9} & \frac{49}{9} & \frac{32}{9} & 0 \\
+0 & \frac{26}{9} & \frac{32}{9} & \frac{31}{9} & \frac{39}{9} & \frac{52}{9} & \frac{37}{9} & 0 \\
+0 & \frac{21}{9} & \frac{28}{9} & \frac{24}{9} & \frac{33}{9} & \frac{50}{9} & \frac{41}{9} & 0 \\
+0 & \frac{35}{9} & \frac{43}{9} & \frac{30}{9} & \frac{32}{9} & \frac{46}{9} & \frac{39}{9} & 0 \\
+0 & \frac{22}{9} & \frac{25}{9} & \frac{15}{9} & \frac{17}{9} & \frac{27}{9} & \frac{25}{9} & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0
+\end{pmatrix} \approx 
+\begin{pmatrix}
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 2.3 & 3.3 & 3.8 & 4.3 & 3.8 & 2.2 & 0 \\
+0 & 2.6 & 3.6 & 4.2 & 5.0 & 5.4 & 3.6 & 0 \\
+0 & 2.9 & 3.6 & 3.4 & 4.3 & 5.8 & 4.1 & 0 \\
+0 & 2.3 & 3.1 & 2.7 & 3.7 & 5.6 & 4.6 & 0 \\
+0 & 3.9 & 4.8 & 3.3 & 3.6 & 5.1 & 4.3 & 0 \\
+0 & 2.4 & 2.8 & 1.7 & 1.9 & 3.0 & 2.8 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0
+\end{pmatrix}
+$$
+(2)
+
+水平：
+$$
+\begin{pmatrix}
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0+8 & -2+8 & -8+6 & -8+7 & -6+2 & -7+0 & 0 \\
+0 & 0+3 & -8+1 & -3+8 & -1+9 & -8+2 & -9+0 & 0 \\
+0 & 0+1 & -1+0 & -1+3 & 0+3 & -3+9 & -3+0 & 0 \\
+0 & 0+6 & -7+5 & -6+4 & -5+6 & -4+8 & -6+0 & 0 \\
+0 & 0+1 & -5+2 & -1+2 & -2+8 & -2+7 & -8+0 & 0 \\
+0 & 0+8 & -8+1 & -8+3 & -1+3 & -1+7 & -3+0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0
+\end{pmatrix} \\
+= \begin{pmatrix}
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 8 & 6 & -2 & -1 & 4 & -7 & 0 \\
+0 & 3 & -7 & 5 & 8 & -6 & -9 & 0 \\
+0 & 1 & -1 & 2 & 3 & 6 & -3 & 0 \\
+0 & 6 & -2 & -2 & 1 & 4 & -6 & 0 \\
+0 & 1 & -3 & 1 & 6 & 5 & -8 & 0 \\
+0 & 8 & -7 & -7 & 2 & 6 & -3 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0
+\end{pmatrix} \\
+$$
+垂直：
+$$
+\begin{pmatrix}
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0+8 & 0+3 & 0+1 & 0+8 & 0+9 & 0+2 & 0 \\
+0 & -2+1 & -8+1 & -8+0 & -6+3 & -7+3 & -2+9 & 0 \\
+0 & -8+7 & -3+6 & -1+5 & -8+4 & -9+6 & -2+8 & 0 \\
+0 & -1+5 & -1+1 & 0+2 & -3+2 & -3+8 & -9+7 & 0 \\
+0 & -7+8 & -6+8 & -5+1 & -4+1 & -6+3 & -8+7 & 0 \\
+0 & -5+0 & -1+0 & -2+0 & -2+0 & -8+0 & -7+0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0
+\end{pmatrix} \\
+= \begin{pmatrix}
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 8 & 3 & 1 & 8 & 9 & 2 & 0 \\
+0 & -1 & -7 & -8 & -3 & -4 & 7 & 0 \\
+0 & -1 & 3 & 4 & -4 & -3 & 6 & 0 \\
+0 & 4 & 0 & 2 & -1 & 5 & -2 & 0 \\
+0 & 1 & 2 & -4 & -3 & -3 & -1 & 0 \\
+0 & -5 & -1 & -2 & -2 & -8 & -7 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0
+\end{pmatrix} \\
+$$
+
+
+
+
+
