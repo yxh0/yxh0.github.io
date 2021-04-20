@@ -12,24 +12,25 @@
 
 2. 设置NFS服务
 
-  1）建立一个NFS服务的专有文件夹nfs。
+- 1）建立一个NFS服务的专有文件夹nfs。
 ```shell
 $ sudo mkdir /opt/nfs
 ```
-2）编辑exports文件。
+- 2）编辑exports文件。
 ```shell
 $ gedit /etc/exports
 ```
-在文件的最后一行添加：`/opt/nfs *(rw,sync,no_root_squash)`
-3）重启portmap服务。
+在文件的最后一行添加：`/opt/nfs *(rw,sync,no_root_squash)` 
+
+- 3）重启portmap服务。
 ```shell
 $ sudo /etc/init.d/portmap restart
 ```
-4）重启nfs服务。
+- 4）重启nfs服务。
 ```shell
 $ sudo /etc/init.d/nfs-kernel-server restart
 ```
-5）显示nfs共享目录。
+- 5）显示nfs共享目录。
 ```shell
 $ showmount -e 
 ````
