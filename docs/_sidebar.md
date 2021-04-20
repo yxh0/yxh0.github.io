@@ -10,6 +10,7 @@
   - [计算机图形学](Computer_graphics/Computer_graphics.md)
   - [ffmpeg](ffmpeg/ffmpeg.md)
   - [bug](bug/bug.md)
+  - [嵌入式](Embedded/Embedded.md)
 - 古籍整理
   - [兩浙防護錄](Zhejiang/Zhejiang.md)
 - 老剧回顾
