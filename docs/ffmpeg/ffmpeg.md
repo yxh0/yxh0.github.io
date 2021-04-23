@@ -15,9 +15,7 @@ ffmpeg -i Violet Evergarden - Best OST Covers.webm -map 0:a output.aac
 
 
 # 去除片头
-ffmpeg -ss 00:02:34 -i input.mp4 -c copy cut.mp4
-ffmpeg -ss 00:04:26 -i input.mp4 -c copy cut.mp4
-ffmpeg -ss 00:04:26 -i input.mp4 -t 821 -c:v copy -c:a copy output.mp4
+ffmpeg -ss 00:01:39 -i input.mp4 -c:v copy -c:a copy output.mp4
 
 ffmpeg -i "01 - 1.mp4" -i "01 - 1.m4a" -map 0:0 -c:v copy -map 1:0 -c:a copy "01 - 1output.mp4"
 
