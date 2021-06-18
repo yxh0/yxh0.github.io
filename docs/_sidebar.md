@@ -1,6 +1,8 @@
 - B站一转载的视频
 
   - [kaya](bilibili_videos/kaya.md)
+  - [Aimer](Aimer/Aimer.md)
+  - [铁道](Railway/Railway.md)
   
 - 杂谈
   - [我的XP系统](xp/xp.md)
@@ -19,5 +21,4 @@
 
 - 老剧回顾
   - [东京爱情故事(東京ラブストーリー)](oldshow/oldmemory.md)
-  
 
