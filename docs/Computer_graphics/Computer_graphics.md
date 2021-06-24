@@ -1,6 +1,6 @@
 # 计算机图形学
 
-[PDF下载]()
+[PDF下载](../file/pdf/Computer_graphics.pdf)
 
 ## 第一周作业
 
