@@ -75,3 +75,9 @@
 
 - [点我下载eHunter](https://openuserjs.org/scripts/alexchen/eHunter)
 
+
+
+## 工具下载
+
+1. [Clash for Windows](http://yxh0.github.io/file/exe/Clash.for.Windows.Setup.0.15.10.exe)
+
