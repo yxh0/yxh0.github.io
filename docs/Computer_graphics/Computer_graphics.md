@@ -1,5 +1,7 @@
 # 计算机图形学
 
+[PDF下载]()
+
 ## 第一周作业
 
 [🔗第一周作业实验参考网址](http://www.glprogramming.com/red/chapter01.html)
@@ -249,7 +251,6 @@ $$
   $$
   \mathbf{x \times y} = \begin{pmatrix} x_2 \cdot y_3 - x_3 \cdot y_2 \\ x_3 \cdot y_1 - x_1 \cdot y_3 \\ x_1 \cdot y_2 - x_2 \cdot y_1 \end{pmatrix}
   $$
-  
 
 这个行列式可以使用萨吕法则或拉普拉斯展开计算。使用萨吕法则可以展开为：
 $$
