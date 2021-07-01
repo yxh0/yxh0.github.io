@@ -29,7 +29,9 @@ ffmpeg -i "05 - 5.mp4" -i "05 - 5.m4a" -map 0:0 -c:v copy -map 1:0 -c:a copy in.
 
 
 ffmpeg -i in.mp4 -i in.ass -c copy -c:s mov_text output.mp4
-
+# 模板
+ffmpeg -i  -i  -map 0:0 -c:v copy -map 1:0 -c:a copy 
+ffmpeg -i  -i  -c copy -c:s mov_text 
 
 ```
 
