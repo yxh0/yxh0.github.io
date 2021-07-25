@@ -3,10 +3,10 @@
   - [kaya](bilibili_videos/kaya.md)
   - [Aimer](Aimer/Aimer.md)
   - [铁道](Railway/Railway.md)
-  
+- 喜欢的舞见
+  - [CY](CY/CY.md)
 - 杂谈
   - [我的XP系统](xp/xp.md)
-  
 - 计算机学习
 
   - [算法](algorithm/algorithm.md)
@@ -18,7 +18,6 @@
   - [ffmpeg](ffmpeg/ffmpeg.md)
   - [bug](bug/bug.md)
   - [嵌入式](Embedded/Embedded.md)
-
 - 老剧回顾
   - [东京爱情故事(東京ラブストーリー)](oldshow/oldmemory.md)
 
