@@ -20,4 +20,6 @@
   - [嵌入式](Embedded/Embedded.md)
 - 老剧回顾
   - [东京爱情故事(東京ラブストーリー)](oldshow/oldmemory.md)
+- Other
+ - [没事别点进去看](link/link.md)
 
