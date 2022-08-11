@@ -79,7 +79,7 @@
 
 ## 工具下载
 
-1. [Clash for Windows(64位)](https://github.com/yxh0/yxh0.github.io/raw/master/docs/file/exe/Clash.for.Windows.Setup.0.16.1.exe)
-2. [Clash for Windows(32位)](https://github.com/yxh0/yxh0.github.io/raw/master/docs/file/exe/Clash.for.Windows.Setup.0.16.0.ia32.exe)
-3. [Clash X](https://yxh0.github.io/file/dmg/ClashX.dmg)
+1. [Clash for Windows(64位)](https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.19.26/Clash.for.Windows.Setup.0.19.26.exe)
+2. [Clash for Windows(32位)](https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.19.26/Clash.for.Windows.Setup.0.19.26.ia32.exe)
+3. [Clash for Windows Mac版](https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.19.26/Clash.for.Windows-0.19.26.dmg)
 
