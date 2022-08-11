@@ -79,7 +79,8 @@
 
 ## 工具下载
 
-1. [Clash for Windows(64位)](https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.19.26/Clash.for.Windows.Setup.0.19.26.exe)
-2. [Clash for Windows(32位)](https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.19.26/Clash.for.Windows.Setup.0.19.26.ia32.exe)
-3. [Clash for Windows Mac版](https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.19.26/Clash.for.Windows-0.19.26.dmg)
+1. [Clash for Windows(64位)](https://github.91chi.fun/https://github.com//Fndroid/clash_for_windows_pkg/releases/download/0.19.26/Clash.for.Windows.Setup.0.19.26.exe)
+2. [Clash for Windows(32位)](https://github.91chi.fun/https://github.com//Fndroid/clash_for_windows_pkg/releases/download/0.19.26/Clash.for.Windows.Setup.0.19.26.ia32.exe)
+3. [Clash for Windows Mac版](https://github.91chi.fun/https://github.com//Fndroid/clash_for_windows_pkg/releases/download/0.19.26/Clash.for.Windows-0.19.26.dmg)
+4. [Clash for Android](https://github.91chi.fun/https://github.com//Kr328/ClashForAndroid/releases/download/v2.5.9/cfa-2.5.9-foss-universal-release.apk)
 
